@@ -119,6 +119,7 @@
 
         MLKBarcodeValueType valueType = barcode.valueType;
         [resultDict setObject:[self getType:barcode.valueType] forKey:@"type"];
+        [resultDict setObject:[self getType:barcode.format] forKey:@"format"];
 
         switch (valueType) {
             case MLKBarcodeValueTypeWiFi:
@@ -241,6 +242,54 @@
     }
     return result;
 }
+
+- (NSString *)getFormat:(long)type
+{
+    NSString *barcodeType = @"UNKNOWN";
+    switch (type) {
+        case MLKBarcodeFormatCode128:
+            barcodeType = @"CODE_128";
+            break;
+        case MLKBarcodeFormatCode39:
+            barcodeType = @"CODE_39";
+            break;
+        case MLKBarcodeFormatCode93:
+            barcodeType = @"CODE_93";
+            break;
+        case MLKBarcodeFormatCodaBar:
+            barcodeType = @"CODABAR";
+            break;
+        case MLKBarcodeFormatEAN13:
+            barcodeType = @"EAN_13";
+            break;
+        case MLKBarcodeFormatEAN8:
+            barcodeType = @"EAN_8";
+            break;
+        case MLKBarcodeFormatITF:
+            barcodeType = @"ITF";
+            break;
+        case MLKBarcodeFormatUPCA:
+            barcodeType = @"UPC_A";
+            break;
+        case MLKBarcodeFormatUPCE:
+            barcodeType = @"UPC_E";
+            break;
+        case MLKBarcodeFormatQRCode:
+            barcodeType = @"QR_CODE";
+            break;
+        case MLKBarcodeFormatPDF417:
+            barcodeType = @"PDF417";
+            break;
+        case MLKBarcodeFormatAztec:
+            barcodeType = @"AZTEC";
+            break;
+        case MLKBarcodeFormatDataMatrix:
+            barcodeType = @"DATA_MATRIX";
+            break;
+    }
+    return barcodeType;
+}
+
 
 - (NSString *)getType:(int)type
 {
