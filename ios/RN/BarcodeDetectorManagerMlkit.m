@@ -119,7 +119,7 @@
 
         MLKBarcodeValueType valueType = barcode.valueType;
         [resultDict setObject:[self getType:barcode.valueType] forKey:@"type"];
-        [resultDict setObject:[self getType:barcode.format] forKey:@"format"];
+        [resultDict setObject:[self getFormat:barcode.format] forKey:@"format"];
 
         switch (valueType) {
             case MLKBarcodeValueTypeWiFi:
