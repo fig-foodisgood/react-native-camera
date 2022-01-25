@@ -1,7 +1,7 @@
 {
   "name": "@figfoodisgood/react-native-camera",
   "description": "A Camera component for React Native. Also reads barcodes.",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "dependencies": {
     "prop-types": "^15.6.2"
   },
