@@ -1,6 +1,18 @@
 {
   "name": "@figfoodisgood/react-native-camera",
   "description": "A Camera component for React Native. Also reads barcodes.",
+  "author": "Fig (https://github.com/fig-foodisgood)",
+  "contributors": [
+    {
+      "name": "Lochlan Wansbrough",
+      "email": "lochie@live.com",
+      "url": "http://lwansbrough.com"
+    },
+    {
+      "name": "Joseph O'Shea",
+      "email": "joey@foodisgood.com"
+    }
+  ],
   "version": "4.2.2",
   "dependencies": {
     "prop-types": "^15.6.2"
